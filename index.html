@@ -9,11 +9,17 @@
    <style>
      .i2
      {
-       margin-left:40px;
+
        width:300px;
        height:50px;
        border-radius:10px;
      }
+     .cont1 
+     {
+       display:flex;
+       justify-content:center;
+       }
+     
      #j2
      {
        background:pink;
@@ -39,7 +45,7 @@
      }
      button
      {
-       margin-left:27%;
+     
        margin-top:10px;
      }
     </style>
@@ -51,10 +57,12 @@
     <header id="j2" class="d-none d-sm-block jumbotron">
       <h1 style="padding-left:50px;font-family:cursive;font-weight:400%%;">Let's have some fun with words!!</h1>
     </header>
-    <div class="">
+    <div class="cont1">
         <input type="text" id="txt" class="i2" placeholder="Enter text-to-speech.."><br>
       </div>
+    <div class="cont1>
     <button type="button" class="btn btn-primary btn-lg" onclick="getSpeech()">Speak</button>
+     </div>
       <script>
       function getSpeech()
       {
