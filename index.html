@@ -1,4 +1,4 @@
-<html>
+  <html>
   <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -87,9 +87,36 @@
        0%{transform:rotate(0deg);}
        100%{transform:rotate(360deg);}
      }
+     @media screen and (min-width:480px)
+     {
+        .round
+       {
+         border-top:4px solid blue;
+         border-bottom:4px solid blue;
+         height:200px;
+         width:200px;
+         position:fixed;
+         top:40%;
+         left:40%;
+         transform:translate(-40%,-40%);
+       }
+       .iround
+       {
+         border-top:4px solid pink;
+         border-bottom:4px solid pink;
+         height:150px;
+         width:150px;
+         position:fixed;
+         top:42%;
+         left:42.5%;
+         transform:translate(0%,0%);
+       }
+     }
     </style>
     <script>
-
+       $(window).on("load",function(){
+       $("#loadI").fadeOut("slow");
+      });
       function getSpeech()
       {
         let msg = document.getElementById("txt").value;
@@ -114,9 +141,7 @@
            window.speechSynthesis.speak(speech);
           }
       }
-      $(window).on("load",function(){
-       $("#loadI").fadeOut("slow");
-      });
+
     </script>
   </head>
   <body>
@@ -140,3 +165,6 @@
     </div>
   </body>
 </html>
+       
+
+
